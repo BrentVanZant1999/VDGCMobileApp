@@ -349,8 +349,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638732056}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.13}
-  m_LocalScale: {x: 6.8996124, y: 1.02, z: 2.7695}
+  m_LocalPosition: {x: 0, y: 0, z: 3.5}
+  m_LocalScale: {x: 6.8996124, y: 1.02, z: 7.666807}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -440,8 +440,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663472009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 8}
-  m_LocalScale: {x: 14, y: 16, z: 8}
+  m_LocalPosition: {x: 0, y: 8, z: 12}
+  m_LocalScale: {x: 14, y: 16, z: 14}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -479,10 +479,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6ba6069ab57374eae43f1e420a9140, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHorizontlalSpeed: 10
-  playerJumpSpeed: 2
+  rightBoundary: 4
+  leftBoundary: -4
   myController: {fileID: 1894463628}
-  movementVector: {x: 0, y: 0, z: 0}
 --- !u!135 &1894463624
 SphereCollider:
   m_ObjectHideFlags: 0
