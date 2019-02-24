@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 { 
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
     float xInc;
     float zInc;
 
+    public GameObject brickParticle;
     //MoveToMethods
 
     //MoveToX
@@ -63,6 +65,7 @@ public class PlayerController : MonoBehaviour
 
         //Initilizes movement vector
         movementVector = Vector3.zero;
+ 
 
     }
 
@@ -123,5 +126,11 @@ public class PlayerController : MonoBehaviour
         if (horiDir) moveToz(zPos);
         else moveTox(xPos);
 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Instantiate(brickParticle, transform.position, Quaternion.identity);
+        GM.instance.LoseLife();
     }
 }

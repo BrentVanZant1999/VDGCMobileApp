@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockController : MonoBehaviour
 {
-
+    public int numCollisions = 0;
     //Finds the ground object
     public GameObject Ground;
 
@@ -18,5 +18,16 @@ public class BlockController : MonoBehaviour
     void Update()
     {
         if (transform.position.y < -transform.localScale.y) Destroy(gameObject);
+
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        numCollisions++;
+        if (numCollisions == 3)
+        {
+            Destroy(gameObject);
+        }
+    }
+
 }
